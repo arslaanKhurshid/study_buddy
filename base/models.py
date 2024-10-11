@@ -9,6 +9,9 @@ class User(AbstractUser):
 
     avatar = models.ImageField(null=True, default="avatar.svg")
 
+    is_staff = models.BooleanField(default=True)
+    is_superuser = models.BooleanField(default=True)
+
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
 
